@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "Magnet"
+version = "0.0.1"
+description = "End-to-end RAG framework"
+authors = ["Adam Zvada <hello@adamzvada.com>"]
+readme = "README.md"
+packages = [{include = "magnet"}]
+repository = "https://github.com/zvadaadam/magnet"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+colbert-ai = "^0.2.15"
+instructor = "^0.4.5"
+openai = "^1.6.1"
+torch = "^2.1.2"
+faiss-cpu = "^1.7.4"
+llama-index = "^0.9.26"
+backoff = "^2.2.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
