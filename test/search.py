@@ -9,9 +9,9 @@ if __name__ == "__main__":
     path_to_index = ".magnet/colbert/indexes/Jobs"
     neural_search = NeuralSearch.from_index(path_to_index)
     
-    query = "Which companies did Steve Jobs (co-)found?"
+    query = "wen did he die?"
     
-    results = neural_search.search(query=query, k=15)
+    results = neural_search.search(query=query, k=3)
     
     @instruct
     def get_answear(query: str, results: List[str]) -> str:
@@ -28,5 +28,3 @@ if __name__ == "__main__":
     answear = get_answear(query=query, results=results)
     
     print(answear)
-    
-

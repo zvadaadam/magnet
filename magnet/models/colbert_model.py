@@ -7,6 +7,8 @@ import srsly
 
 
 class ColBERT(object):
+    
+    
     def __init__(
         self,
         pretrained_model_name_or_path: Union[str, Path],
@@ -52,6 +54,12 @@ class ColBERT(object):
         self.run_context = Run().context(self.run_config)
         self.run_context.__enter__()  # Manually enter the context
         self.searcher = None
+        
+    # def create_index():
+    #     pass
+    
+    # def index():
+    #     pass
 
     def _update_index(self, new_documents: list[str], searcher: Searcher):
         updater = IndexUpdater(
